@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# List active IPv4 addresses by parsing /proc/net/fib_trie
+# Display all active IPv4 addresses on the machine
 
-grep -oP '32 host LOCAL.*\n\s+local\s+\K(\d{1,3}(\.\d{1,3}){3})' /proc/net/fib_trie | sort -u
+ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | sort -u
