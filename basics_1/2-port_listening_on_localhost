@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Listen on localhost port 98 and print incoming data
+
+nc -l -p 98 -s 127.0.02
