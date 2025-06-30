@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script that shows only listening sockets with PID and program names
 
-sudo ss -tunlp
+sudo netstat -tunlp
