@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-# Display active IPv4 IPs
-
-ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | sort -u
+ifconfig | grep 'inet ' | awk '{print $2}' | sort -u
