@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-sudo lsof -i -n -P | grep LISTEN
+# Script that displays listening ports with PID and program names
+
+netstat -lp
