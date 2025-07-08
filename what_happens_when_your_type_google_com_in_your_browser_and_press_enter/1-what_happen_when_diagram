@@ -1,0 +1,35 @@
+1. DNS Resolution:
+
+User's browser sends a DNS query to resolve www.google.com to an IP address.
+
+2. Request to Server IP (Port 443):
+
+Browser sends HTTPS request to the resolved IP on port 443 (standard for HTTPS).
+
+3. Traffic Encrypted:
+
+Traffic is encrypted with SSL/TLS between browser and server (show lock symbol or note encryption).
+
+4. Traffic Passes Through Firewall:
+
+Request passes through firewall that filters incoming traffic.
+
+5. Load Balancer:
+
+Request hits load balancer which distributes it to one of many web servers.
+
+6. Web Server:
+
+The web server receives the request and serves static content or forwards dynamic requests.
+
+7. Application Server:
+
+Application server generates the dynamic web page content.
+
+8. Database:
+
+Application server queries the database for necessary data.
+
+9. Response Flow Back:
+
+Data flows back through the chain to the browser, encrypted.

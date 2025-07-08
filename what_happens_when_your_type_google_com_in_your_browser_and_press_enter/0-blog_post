@@ -1,0 +1,30 @@
+DNS Request: Finding the Servers IP Address
+The first step your computer takes is to translate the human-readable domain name www.google.com into an IP address that computers use to communicate. This is done through the Domain Name System (DNS). Your browser asks a DNS resolver to find the IP address associated with www.google.com. The resolver queries DNS servers hierarchically until it finds the IP address (e.g., 142.250.72.36). Without this translation, your browser wouldnt know where to send the request.
+
+TCP/IP: Establishing a Connection
+Once the IP address is known, your computer uses the TCP/IP protocol suite to establish a connection with Googleâs server. TCP (Transmission Control Protocol) ensures reliable data transfer by setting up a connection-oriented session. IP (Internet Protocol) handles the routing of packets across networks to reach the server. The TCP handshake process (SYN, SYN-ACK, ACK) sets up this connection so data can flow securely.
+
+Firewall: Security Gatekeepers
+Between your device and Googles servers, several firewalls may exist. Firewalls act as security filters that allow or block traffic based on rules. On your device, your network, and Googles infrastructure, firewalls help protect against malicious traffic, ensuring only legitimate requests and responses are exchanged.
+
+HTTPS and SSL: Secure Communication
+Because you typed https://, your browser uses HTTPS an encrypted protocol that ensures data privacy and integrity. HTTPS relies on SSL/TLS certificates that authenticate Googles identity and establish an encrypted channel between your browser and the server. This protects you from eavesdropping and man-in-the-middle attacks.
+
+Load Balancer: Managing Traffic
+Googles servers are enormous and distributed globally. When your request reaches Googles network, it first hits a load balancer. Load balancers distribute incoming requests evenly across multiple servers to optimize resource use, reduce latency, and improve reliability. If one server is busy or down, the load balancer routes your request elsewhere.
+
+
+Web Server: Receiving Your Request
+The request forwarded by the load balancer lands on a web server (like Nginx or Apache). The web server handles HTTP requests, serving static content (images, HTML, CSS) directly or forwarding dynamic requests to the application server.
+
+
+
+Application Server: Processing Logic
+For dynamic content like search results, the application server processes your request. It runs the business logic, queries databases, executes algorithms, and generates the content that will be sent back to your browser.
+
+Database: Storing and Retrieving Data
+If your request involves stored data (like your search history or personalized settings), the application server communicates with a database. The database efficiently stores and retrieves data, ensuring your results are accurate and fast.
+
+Putting It All Together
+Once the application server has the data, it sends the response back to the web server, which then sends it over the encrypted HTTPS connection back to your browser. Your browser receives the HTML, CSS, and JavaScript, and renders the page you see.
+
